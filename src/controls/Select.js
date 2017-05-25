@@ -7,11 +7,13 @@ class Select extends Component {
     this.state = {
       html: props.html
     }
+    
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
     this.setState({
-      value: e.target.value
+      html: e.target.value
     });
     this.props.handleChange(e);
   }
